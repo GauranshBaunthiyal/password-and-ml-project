@@ -1,17 +1,15 @@
-# Install if needed
-# install.packages("shiny")
-# install.packages("ggplot2")
+
 
 library(shiny)
 library(ggplot2)
 
-# Sample dataset
+
 data <- data.frame(
   StudyHours = c(1,2,3,4,5,6,7,8,9,10),
   Marks = c(35,40,50,55,65,70,75,85,90,95)
 )
 
-# Train model
+
 model <- lm(Marks ~ StudyHours, data = data)
 
 ui <- fluidPage(
